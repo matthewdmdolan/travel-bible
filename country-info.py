@@ -93,6 +93,7 @@ for i in range(0, len(countries_to_fetch), batch_size):
     time.sleep(2)  # Introducing a delay of 5 seconds between each batch
 
 df = pd.DataFrame(parsed_data)
+df['Lat lng'] = df['Lat lng'].apply(str)
 print(df)
 
 # Write to SQLite3 database

@@ -1,14 +1,14 @@
 import sqlite3
 
-# Connect to the SQLite database
+# Connect to the database
 conn = sqlite3.connect('travel_info_database.sqlite3')
 cursor = conn.cursor()
 
-# Retrieve the list of all tables in the database
+# Step 1: Fetch the list of tables
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 tables = cursor.fetchall()
 
-# Print schema of each table
+# Step 2: For each table, fetch its structure using PRAGMA
 for table in tables:
     table_name = table[0]
     print(f"Table: {table_name}")
@@ -16,7 +16,8 @@ for table in tables:
     columns = cursor.fetchall()
     for column in columns:
         print(column)
-    print("-----\n")
+    print("-----")
+
 
 # Close the connection
 conn.close()
