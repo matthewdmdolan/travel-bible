@@ -1,4 +1,4 @@
-# travel-bible
+# The Travel Bible
 
 This repo aims to make tracking my own travels, both past and future, a lot easier. 
 
