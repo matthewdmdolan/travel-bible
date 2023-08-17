@@ -2,7 +2,15 @@
 
 This repo aims to make tracking my own travels, both past and future, a lot easier. 
 
-Ultimately, the repo ingests two google sheet files into sqlite tables. 1) Past Travel Experiences ii) Planned Travel Experiences. Both these tables are ingested monthly to ensure updates and written to an SQLite DB for data integrity. Furthermore, an api call is made to gain up to date social/demographic/demographic information on each country, e.g. population, using the REST Countries API (source: https://restcountries.com/)
+Ultimately, the repo ingests two google sheet files into sqlite tables. 1) Past Travel Experiences ii) Planned Travel Experiences. Both these tables are ingested monthly to ensure updates and written to an SQLite DB for data integrity. Furthermore, an api call is made to gain up to date social/demographic/demographic information on each country, e.g. population, using the REST Countries API (source: https://restcountries.com/). 
+
+Here is a crude diagram of the dataflows: 
+![image](https://github.com/matthewdmdolan/travel-bible/assets/60691539/30ea08a9-e414-426a-88e4-e5c07cbabaf4)
+
+
+
+
+
 
 The SQL Config file is for checking the database schema and ensuring all tables are loaded. Annoyingly due to the limited functionality of Tableau Public I then have to write the SQL Query to CSV for visualisation. So please ignore the sqlite-to-csv file if you are lucky enough to have the full Tableau Desktop version with all it's shiny drivers.
 
