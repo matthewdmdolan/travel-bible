@@ -24,6 +24,22 @@ history_df = pd.DataFrame.from_dict(travel_history_data)
 # Write to SQLite3 database
 conn = sqlite3.connect('travel_info_database.sqlite3')
 history_df .to_sql('travel_history_info', conn, if_exists='replace', index=False)
+
+##change data types
+# Table: travel_history_info
+# (0, 'Visited Date From', 'TEXT', 0, None, 0)
+# (1, 'Visited Date To', 'TEXT', 0, None, 0)
+# (2, 'Country ', 'TEXT', 0, None, 0)
+# (3, 'City', 'TEXT', 0, None, 0)
+# (4, 'Rating (1-10)', 'INTEGER', 0, None, 0)
+# (5, 'Price (1-10)', 'TEXT', 0, None, 0)
+# (6, 'Comments', 'TEXT', 0, None, 0)
+# (7, 'Highlights 1', 'TEXT', 0, None, 0)
+# (8, 'Highlights 2', 'TEXT', 0, None, 0)
+# (9, 'Highlights 3', 'TEXT', 0, None, 0)
+
+
+
 conn.close()
 
 print("Data written to SQLite3 database.")
